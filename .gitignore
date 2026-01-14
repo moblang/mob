@@ -5,8 +5,8 @@ bin/
 *.dll
 *.so
 *.dylib
-mob
-main
+^mob$
+^main$
 
 # Test binaries
 *.test
