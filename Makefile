@@ -1,4 +1,4 @@
-.PHONY: build test clean install
+.PHONY: build test clean install reinstall dev
 
 BUILD_DIR=bin
 BINARY_NAME=mob
@@ -34,3 +34,13 @@ lint:
 fmt:
 	@echo "Formatting code..."
 	go fmt ./...
+
+reinstall: clean build install
+	@echo "✅ Reinstalled to ${HOME}/.local/bin/$(BINARY_NAME)"
+
+dev:
+	@echo "Building mob (dev mode)..."
+	@mkdir -p $(BUILD_DIR)
+	go build -o $(BUILD_DIR)/$(BINARY_NAME) ./cmd/mob
+	@echo "✅ Built successfully"
+	@echo "Run: ./$(BUILD_DIR)/$(BINARY_NAME) version"

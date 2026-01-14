@@ -117,12 +117,38 @@ class User extends Model:
 
 ## 🛠️ Desenvolvimento
 
+### Comandos de Build
+
 ```bash
-make build       # Build do binário
+make build       # Build do binário local (bin/mob)
+make build-all   # Build para todas as plataformas
+make clean       # Limpa build artifacts
 make test        # Executa testes
 make lint        # Executa linter
-make clean       # Limpa build
-make install     # Instala em ~/.local/bin
+make fmt         # Formata código
+```
+
+### Instalação Global
+
+```bash
+make install     # Instala em ~/.local/bin/mob
+make reinstall   # Reinstala (clean + build + install)
+```
+
+### Atualização Após Modificações
+
+**Opção 1 - Manual:**
+```bash
+make reinstall
+# ou
+./update-mob.sh
+```
+
+**Opção 2 - Automática (Watcher):**
+```bash
+./watch-and-rebuild.sh
+# Monitora mudanças e recompila automaticamente
+# Requer: sudo apt install inotify-tools
 ```
 
 ## 📦 Features
