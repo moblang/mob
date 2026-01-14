@@ -4,6 +4,45 @@
 
 Arquivos da linguagem utilizam a extensão **`.mob`**.
 
+## 📚 Comandos
+
+### Comandos Básicos
+
+```bash
+mob run <file.mob>      # Compila e executa
+mob build <file.mob>    # Compila para binário nativo
+mob serve <file.mob>    # Inicia servidor HTTP
+mob lint <path>         # Executa linter
+mob version             # Mostra versão
+mob help                # Mostra ajuda
+mob info                # Mostra informações do sistema
+```
+
+### Comandos de Ajuda
+
+```bash
+mob help                # Mostra todos os comandos disponíveis
+mob help run            # Ajuda detalhada do comando run
+mob help build          # Ajuda detalhada do comando build
+mob --help              # Mostra ajuda (alternativa)
+mob -h                  # Mostra ajuda (alternativa curta)
+```
+
+### Atalhos
+
+```bash
+mob <file.mob>          # Atalho para "mob run <file.mob>"
+mob -v                  # Mostra versão
+mob --version           # Mostra versão
+```
+
+### Opções do Build
+
+```bash
+mob build -o <nome> <file>    # Especifica nome do binário
+mob build --output <nome>       # Especifica nome do binário
+```
+
 ## 🚀 Instalação Rápida
 
 ### Via Script (Recomendado)
