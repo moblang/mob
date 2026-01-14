@@ -1,0 +1,11 @@
+class User:
+    public name: string
+    public age: int
+
+    public function greet():
+        print("Hello, I'm " + this.name + " and I'm " + str(this.age) + " years old")
+
+user = new User()
+user.name = "Alice"
+user.age = 30
+user.greet()
