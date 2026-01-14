@@ -33,5 +33,9 @@ Thumbs.db
 *.temp
 temp_*
 
+# Test binaries
+testapp
+myapp
+
 # Build artifacts
 dist/
